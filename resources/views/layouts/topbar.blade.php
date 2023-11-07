@@ -9,12 +9,23 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
+        <div class="container-fluid d-flex">
           <a class="navbar-brand" href="#">Smaken Store</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
+          
+          {{-- <div class="d-flex justify-content-end order-2" >
+            <div>
+                <button class="btn btn-outline-primary rounded-0 py-2 px-4">Sign in</button>
+            </div>
+            <div>
+                <button class="btn btn-primary rounded-0 py-2 px-4">Log in</button>
+            </div>
+          </div> --}}
+
+
+          <div class="collapse navbar-collapse justify-content-center " id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link active" href="#">Home</a>
@@ -27,14 +38,16 @@
               </li>
             </ul>
           </div>
-          <div class="collapse navbar-collapse" >
+
+          <div class="d-flex justify-content-end" >
             <div>
-                <button>Sign in</button>
+                <button class="btn btn-outline-primary rounded-0 py-2 px-4">Sign in</button>
             </div>
             <div>
-                <button>Log in</button>
+                <button class="btn btn-primary rounded-0 py-2 px-4">Log in</button>
             </div>
           </div>
+
         </div>
       </nav>
 {{-- CONTENT --}}
