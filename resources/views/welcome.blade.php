@@ -1,5 +1,6 @@
 @extends('layouts.topbar')
 
+
 @section('content')
 <div class="container-fluid mt-5 pt-5">
     {{-- HERO --}}
@@ -25,25 +26,14 @@
 <div class="container">
     <div class="row m-2">
         <div class="card" style="width: 18rem;">
-            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top" alt="...">
+            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top mt-2" alt="...">
             <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top" alt="...">
-            <div class="card-body">
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <p class="card-category text-secondary">Merch</p>
+                <p class="card-title fs-4">Nama Produk</p>
+              <p class="card-text">Some quick example text.</p>
+              <p class="card-price fw-bold fs-5">Rp.9000</p>
             </div>
         </div>
     </div>
 </div>
-
-
 @endsection
