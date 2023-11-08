@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ASD</title>
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/topbar.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-light shadow fixed-top">
         <div class="container-fluid">
-          <img src="{{ asset('assets/img/smk1lmj.png') }}" class=" ms-5 justify-content-start" alt="">
-          Smaken Store
+          <div>
+            <img src="{{ asset('assets/img/smkn1lmj.png') }}" class="ms-5  justify-content-start" alt="">
+          <a class="navbar-brand" href="#">Smaken Store</a>
+          </div>
+          
           {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> --}}
