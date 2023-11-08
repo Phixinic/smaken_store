@@ -9,8 +9,9 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg bg-light shadow fixed-top">
-        <div class="container-fluid d-flex">
-          <a class="navbar-brand" href="#">Smaken Store</a>
+        <div class="container-fluid">
+          <img src="{{ asset('assets/img/smk1lmj.png') }}" class=" ms-5 justify-content-start" alt="">
+          Smaken Store
           {{-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button> --}}
@@ -32,10 +33,10 @@
 
           <div class="d-flex justify-content-end" >
             <div class="mx-2">
-                <button class="btn btn-outline-primary rounded-0 py-2 px-4">Sign in</button>
+                <button class="btn btn-outline-primary rounded-0 py-2 px-4">Sign up</button>
             </div>
             <div>
-                <button class="btn btn-primary rounded-0 py-2 px-4">Log in</button>
+                <button class="btn btn-primary rounded-0 py-2 px-4">Sign in</button>
             </div>
           </div>
 
