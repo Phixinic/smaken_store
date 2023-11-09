@@ -14,10 +14,10 @@
 {{-- Bar Fitur --}}
 <div class="bg-primary my-3">
     <ul class="d-flex justify-content-evenly flex-wrap">
-        <a href="" class="btn p-4">TopUp Game</a>
-        <a href="" class="btn p-4">TopUp Pulsa</a>
-        <a href="" class="btn p-4">Merch</a>
-        <a href="" class="btn p-4">Produk</a>
+        <a href="" class="btn p-4 bi bi-gem"> Game</a>
+        <a href="" class="btn p-4 bi bi-stars">TopUp Pulsa</a>
+        <a href="" class="btn p-4 bi bi-sunglasses">Merch</a>
+        <a href="" class="btn p-4 bi bi-basket">Produk</a>
     </ul>
 </div>
 {{-- Bar Fitur --}}
