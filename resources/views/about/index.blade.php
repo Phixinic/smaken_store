@@ -1,1 +1,4 @@
-<h1>ahsdahbsd</h1>
+@extends('layouts.topbar')
+@section('content')
+<h2>Profil Admin</h2>
+@endsection

@@ -1,1 +1,4 @@
-<h1>asdasd</h1>
+@extends('layouts.topbar')
+@section('content')
+
+@endsection
