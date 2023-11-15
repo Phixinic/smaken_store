@@ -66,10 +66,10 @@
                   <a class="nav-link active" href="#">Home</a>
                 </li>
                 <li class="nav-item px-3">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="{{ route('about') }}">About</a>
                 </li>
                 <li class="nav-item px-3">
-                  <a class="nav-link" href="#">FAQ</a>
+                  <a class="nav-link" href="{{ route('faq') }}">FAQ</a>
                 </li>
               </div>
                 <div class="d-flex">
