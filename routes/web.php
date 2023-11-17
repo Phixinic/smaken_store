@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\AboutController;
-use App\Http\Controllers\FaqController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FaqController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
 Route::get('/about', [AboutController::class, 'index'])->name('about');
