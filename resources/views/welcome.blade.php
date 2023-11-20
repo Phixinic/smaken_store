@@ -33,48 +33,46 @@
             </form>
           </div>
     </div>
-    <div class="row m-2">
+    <div class="row mb-3 mt-4">
         <div class="col-md-3">
-            <div class="card m-1">
-            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top mt-2" alt="...">
+            <div class="card m-1 border-0 shadow-lg">
+            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top" alt="...">
             <div class="card-body">
-                <p class="card-category text-secondary">Topup Game</p>
-                <p class="card-title fs-4">Mobile Legends</p>
+                <small class="card-category text-secondary">Topup Game</small>
+                <p class="card-title fs-4 mt-2">Mobile Legends</p>
               <p class="card-text">50 Diamond</p>
-              <p class="card-price fw-bold fs-5">Rp 15.000</p>
+              <p class="card-price fw-bold fs-5 text-primary">Rp 15.000</p>
             </div>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card m-1">
-            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top mt-2" alt="...">
+            <div class="card m-1 border-0 shadow-lg">
+            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top" alt="...">
             <div class="card-body">
-                <p class="card-category text-secondary">Topup Game</p>
-                <p class="card-title fs-4">Mobile Legends</p>
+                <small class="card-category text-secondary">Topup Game</small>
+                <p class="card-title fs-4 mt-2">Mobile Legends</p>
               <p class="card-text">50 Diamond</p>
-              <p class="card-price fw-bold fs-5">Rp 15.000</p>
+              <p class="card-price fw-bold fs-5 text-primary">Rp 15.000</p>
             </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card m-1">
-            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top mt-2" alt="...">
+        </div><div class="col-md-3">
+            <div class="card m-1 border-0 shadow-lg">
+            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top" alt="...">
             <div class="card-body">
-                <p class="card-category text-secondary">Topup Game</p>
-                <p class="card-title fs-4">Mobile Legends</p>
+                <small class="card-category text-secondary">Topup Game</small>
+                <p class="card-title fs-4 mt-2">Mobile Legends</p>
               <p class="card-text">50 Diamond</p>
-              <p class="card-price fw-bold fs-5">Rp 15.000</p>
+              <p class="card-price fw-bold fs-5 text-primary">Rp 15.000</p>
             </div>
             </div>
-        </div>
-        <div class="col-md-3">
-            <div class="card m-1">
-            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top mt-2" alt="...">
+        </div><div class="col-md-3">
+            <div class="card m-1 border-0 shadow-lg">
+            <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top" alt="...">
             <div class="card-body">
-                <p class="card-category text-secondary">Topup Game</p>
-                <p class="card-title fs-4">Mobile Legends</p>
+                <small class="card-category text-secondary">Topup Game</small>
+                <p class="card-title fs-4 mt-2">Mobile Legends</p>
               <p class="card-text">50 Diamond</p>
-              <p class="card-price fw-bold fs-5">Rp 15.000</p>
+              <p class="card-price fw-bold fs-5 text-primary">Rp 15.000</p>
             </div>
             </div>
         </div>

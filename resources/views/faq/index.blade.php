@@ -3,7 +3,7 @@
 
 <div class="container-fluid mt-5 pt-5">
     <div class="row mx-3 mb-4">
-        <div class="col-5 d-flex align-items-center text-wrap text-primary">
+        <div class="col-5 d-flex align-items-center text-wrap text-primary mx-4">
             <h2>Pertanyaan apa yang sering diajukan?</h2>
         </div>
         <div class="col d-flex justify-content-center">
