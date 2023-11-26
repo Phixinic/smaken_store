@@ -41,7 +41,7 @@
                 <small class="card-category text-secondary">Produk</small>
                 <p class="card-title fs-4 mt-2">Jaket</p>
               <p class="card-text">XL</p>
-              <p class="card-price fw-bold fs-5 text-primary">Rp 90.000</p>
+              <p class="card-price fw-bold fs-5 text-primary">Rp 90.000 &nbsp;<a href="https://wa.me/089515793188" type="button" class="btn btn-warning">Beli</a></p>
             </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                 <small class="card-category text-secondary">Topup Game</small>
                 <p class="card-title fs-4 mt-2">Mobile Legends</p>
               <p class="card-text">50 Diamond</p>
-              <p class="card-price fw-bold fs-5 text-primary">Rp 15.000</p>
+              <p class="card-price fw-bold fs-5 text-primary">Rp 15.000 &nbsp;<a href="https://wa.me/089515793188" type="button" class="btn btn-warning">Beli</a></p>
             </div>
             </div>
         </div><div class="col-md-3">
@@ -62,7 +62,7 @@
                 <small class="card-category text-secondary">Topup Pulsa</small>
                 <p class="card-title fs-4 mt-2">Telkomsel</p>
               <p class="card-text">10.000</p>
-              <p class="card-price fw-bold fs-5 text-primary">Rp 12.000</p>
+              <p class="card-price fw-bold fs-5 text-primary">Rp 12.000 &nbsp;<a href="https://wa.me/089515793188" type="button" class="btn btn-warning">Beli</a></p>
             </div>
             </div>
         </div><div class="col-md-3">
@@ -72,7 +72,8 @@
                 <small class="card-category text-secondary">Merch</small>
                 <p class="card-title fs-4 mt-2">Gita😋</p>
               <p class="card-text">165cm</p>
-              <p class="card-price fw-bold fs-5 text-primary">Rp 20.000.000</p>
+              <p class="card-price fw-bold fs-5 text-primary">Rp 20.000.000 &nbsp;<a href="https://wa.me/089515793188" type="button" class="btn btn-warning">Beli</a></p>
+              
             </div>
             </div>
         </div>
