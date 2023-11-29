@@ -18,6 +18,7 @@ use App\Http\Controllers\DashboardController;
 
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/detail', [DashboardController::class, 'show'])->name('detail-barang');
 
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
