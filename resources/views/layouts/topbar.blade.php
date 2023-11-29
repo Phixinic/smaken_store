@@ -27,13 +27,13 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
               <div class="navbar-nav mx-auto">
                 <li class="nav-item px-3">
-                  <a class="nav-link active" href="{{ route('dashboard') }}">Home</a>
+                  <a class="nav-link {{ Request::routeIs('dashboard') ? 'active' : '' }}" href="{{ route('dashboard') }}">Home</a>
                 </li>
                 <li class="nav-item px-3">
-                  <a class="nav-link" href="{{ route('about') }}">About</a>
+                  <a class="nav-link {{ Request::routeIs('about') ? 'active' : '' }}" href="{{ route('about') }}">About</a>
                 </li>
                 <li class="nav-item px-3">
-                  <a class="nav-link" href="{{ route('faq') }}">FAQ</a>
+                  <a class="nav-link {{ Request::routeIs('faq') ? 'active' : '' }}" href="{{ route('faq') }}">FAQ</a>
                 </li>
               </div>
                 <div class="d-flex">
