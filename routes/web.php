@@ -41,6 +41,14 @@ Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::prefix('admin')->middleware('onlyAdmin')->group(function(){
     Route::get('/', [AdminController::class, 'index'])->name('admin-dashboard');
     Route::get('/users', [AdminController::class, 'users'])->name('admin-users');
+    Route::get('/category', [AdminController::class, 'category'])->name('admin-category');
+    Route::get('/category/add', [AdminController::class, 'createCateg'])->name('add-category');
+    Route::post('/category/add', [AdminController::class, 'storeCateg']);
+    Route::get('/category/edit/{id}', [AdminController::class, 'editCateg'])->name('edit-category');
+    Route::post('/category/edit/{id}', [AdminController::class, 'updateCateg']);
+    Route::delete('/category/{id}', [AdminController::class, 'deleteCateg'])->name('delete-category');
+    Route::get('/product', [AdminController::class, 'product'])->name('admin-product');
+    Route::post('/product/{id}', [AdminController::class, 'changeStatProduct'])->name('status-product');
     Route::get('/users/edit/{id}', [AdminController::class, 'show'])->name('user-show');
     Route::post('/users/{id}', [AdminController::class, 'changeStatus'])->name('change-status');
 
@@ -48,5 +56,7 @@ Route::prefix('admin')->middleware('onlyAdmin')->group(function(){
 //seller
 Route::prefix('seller')->middleware('onlySeller')->group(function(){
     Route::get('/', [SellerController::class, 'index'])->name('seller-dashboard');
+    Route::get('/product', [SellerController::class, 'product'])->name('product-user');
+    Route::get('/product/add', [SellerController::class, 'addProduct'])->name('add-product');
    
 }); 

@@ -57,9 +57,15 @@
                     <span>Users</span></a>
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('admin-category') }}">
+                    <i class="fas fa-fw fa-list"></i>
+                    <span>Category</span></a>
+            </li>
+
   
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('admin-product') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Products</span></a>
             </li>
@@ -69,11 +75,17 @@
                     <i class="fas fa-fw fa-comment"></i>
                     <span>FAQ</span></a>
             </li>
+            {{-- BARR --}}
             @else
             <li class="nav-item">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('product-user') }}">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Products</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Profile</span></a>
             </li>
             @endif
 

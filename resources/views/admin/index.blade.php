@@ -39,7 +39,7 @@
                             <h5>Products</h5>
                         </div>
                         <div class="card-text">
-                            10
+                            {{ $products }}
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                             <h5>Pending Products</h5>
                         </div>
                         <div class="card-text">
-                            10
+                            {{ $products_pending }}
                         </div>
                     </div>
                 </div>
