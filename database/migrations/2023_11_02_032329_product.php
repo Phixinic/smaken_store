@@ -18,7 +18,7 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->string('name');
             $table->string('price');
-            $table->string('made_by'); //dibuat oleh.. ex: Produk dibuat oleh kelas RPL
+            $table->unsignedBigInteger('user_id'); //dibuat oleh.. ex: Produk dibuat oleh kelas RPL
             $table->longText('description')->nullable();
             $table->enum('status',['pending','verified','rejected'])->default('pending');
             $table->timestamps();

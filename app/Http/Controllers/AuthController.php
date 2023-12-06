@@ -60,12 +60,12 @@ class AuthController extends Controller
             
             $request->session()->regenerate();
             if(Auth::user()->role == 'SA'){
-                dd('admin');
-            //    return redirect('/dashboard');
+                // dd('admin');
+               return redirect('/admin');
             }
             if(Auth::user()->role == 'seller'){
-            //    return redirect('/profile');
-            dd('seller');
+               return redirect('/seller');
+            // dd('seller');
             }
         }
 

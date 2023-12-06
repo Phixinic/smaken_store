@@ -37,7 +37,7 @@
                 </li>
               </div>
                 <div class="d-flex">
-                  <a href="#" class="btn btn-primary py-2 px-4 me-3 rounded-0">Log In</a>
+                  <a href="{{ route('login') }}" class="btn btn-primary py-2 px-4 me-3 rounded-0">Log In</a>
                   {{-- <a href="#" class="btn btn-primary py-2 px-4 rounded-0 mx-2">Sign Up</a> --}}
                 </div>
           </div>
