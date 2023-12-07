@@ -81,9 +81,9 @@
             <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top" alt="...">
             <div class="card-body">
                 <small class="card-category text-secondary">Merch</small>
-                <p class="card-title fs-4 mt-2">Gita😋</p>
-              <p class="card-text">165cm</p>
-              <p class="card-price fw-bold fs-5 text-primary">Rp 20.000.000 &nbsp;</p>
+                <p class="card-title fs-4 mt-2">Hoodie</p>
+              <p class="card-text">X</p>
+              <p class="card-price fw-bold fs-5 text-primary">Rp 200.000 &nbsp;</p>
               <div class="d-flex">
                   <a href="{{ route('detail-barang') }}" type="button" class="btn btn-warning flex-fill">Beli</a>
               </div>
@@ -138,9 +138,9 @@
             <img src="{{ ('assets/img/test1.jpg') }}" class="card-img-top" alt="...">
             <div class="card-body">
                 <small class="card-category text-secondary">Merch</small>
-                <p class="card-title fs-4 mt-2">Gita😋</p>
-              <p class="card-text">165cm</p>
-              <p class="card-price fw-bold fs-5 text-primary">Rp 20.000.000 &nbsp;</p>
+                <p class="card-title fs-4 mt-2">Hoodie</p>
+              <p class="card-text">X</p>
+              <p class="card-price fw-bold fs-5 text-primary">Rp 200.000 &nbsp;</p>
               <div class="d-flex">
                   <a href="{{ route('detail-barang') }}" type="button" class="btn btn-warning flex-fill">Beli</a>
               </div>
