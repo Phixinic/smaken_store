@@ -39,7 +39,7 @@
                       @csrf
                       <div class="form-outline mb-3">
                         <label class="form-label" for="email">E-mail</label>
-                        <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="johnDoe@apalah.com"/>
+                        <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="johnDoe@gmail.com"/>
                       </div>
                       <div class="form-outline mb-4">
                         <label class="form-label" for="password">Password</label>
@@ -52,7 +52,7 @@
                     </form>
                   <hr>
                 <div class="d-flex flex-column">
-                    <a class="btn btn-success flex-fill" href="">Ingin Bergabung? Daftar Sekarang</a>
+                    <a class="btn btn-success flex-fill" href="{{ route('register') }}">Ingin Bergabung? Daftar Sekarang</a>
                 </div>
 
                 </div>

@@ -37,8 +37,13 @@
                 </li>
               </div>
                 <div class="d-flex">
-                  <a href="{{ route('login') }}" class="btn btn-primary py-2 px-4 me-3 rounded-0">Log In</a>
-                  {{-- <a href="#" class="btn btn-primary py-2 px-4 rounded-0 mx-2">Sign Up</a> --}}
+                  @if (!Auth::user())
+                  <a href="{{ route('login') }}" class="btn btn-primary py-2 px-4 me-3 rounded-0">Log In</a> 
+                  @elseif (Auth::user()->role == 'SA')
+                  <a href="{{ route('admin-dashboard') }}" class="btn btn-primary py-2 px-4 rounded-0 mx-2">Dashboard</a>
+                  @else
+                  <a href="{{ route('seller-dashboard') }}" class="btn btn-primary py-2 px-4 rounded-0 mx-2">Dashboard</a>
+                  @endif
                 </div>
           </div>
       </nav>
