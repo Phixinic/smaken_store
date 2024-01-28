@@ -12,15 +12,19 @@ class Product extends Model
         return $this->hasOne(User::class);
     }
     public function category(){
-        return $this->hasOne(Category::class);
+        return $this->belongsTo(Category::class);
     }
     
     public $table = 'product_master';
     protected $fillable = [
         'name',
         'price',
+        'category_id',
+        'user_id',
+        'slug',
         'description',
-        'status',       
+        'status',
+        'image'       
     ];
     use HasFactory;
 }

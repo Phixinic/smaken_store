@@ -197,6 +197,9 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('style/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('style/js/demo/chart-pie-demo.js') }}"></script>
+    
+    
+    <script src="{{ asset('style/js/jquery-3.7.1.min.js') }}"></script>
 
 </body>
 

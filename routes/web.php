@@ -21,7 +21,10 @@ use App\Http\Controllers\DashboardController;
 
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-Route::get('/detail', [DashboardController::class, 'show'])->name('detail-barang');
+Route::get('/product/{product:slug}', [DashboardController::class, 'show'])->name('detail-barang');
+
+Route::get('/getReccomendation', [DashboardController::class, 'getReccomendation'])->name('getReccomendation');
+Route::get('/getDataProduct', [DashboardController::class, 'getDataProduct'])->name('getDataProduct');
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 Route::middleware('onlyGuest')->group(function(){
@@ -41,14 +44,19 @@ Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::prefix('admin')->middleware('onlyAdmin')->group(function(){
     Route::get('/', [AdminController::class, 'index'])->name('admin-dashboard');
     Route::get('/users', [AdminController::class, 'users'])->name('admin-users');
+
     Route::get('/category', [AdminController::class, 'category'])->name('admin-category');
     Route::get('/category/add', [AdminController::class, 'createCateg'])->name('add-category');
     Route::post('/category/add', [AdminController::class, 'storeCateg']);
     Route::get('/category/edit/{id}', [AdminController::class, 'editCateg'])->name('edit-category');
     Route::post('/category/edit/{id}', [AdminController::class, 'updateCateg']);
     Route::delete('/category/{id}', [AdminController::class, 'deleteCateg'])->name('delete-category');
+
     Route::get('/product', [AdminController::class, 'product'])->name('admin-product');
+    Route::get('/product/create', [AdminController::class, 'create'])->name('create-product');
     Route::post('/product/{id}', [AdminController::class, 'changeStatProduct'])->name('status-product');
+    // Route::post('/product/create', [AdminController::class, 'store'])->name('store-product');
+    
     Route::get('/users/edit/{id}', [AdminController::class, 'show'])->name('user-show');
     Route::post('/users/{id}', [AdminController::class, 'changeStatus'])->name('change-status');
 
@@ -57,6 +65,8 @@ Route::prefix('admin')->middleware('onlyAdmin')->group(function(){
 Route::prefix('seller')->middleware('onlySeller')->group(function(){
     Route::get('/', [SellerController::class, 'index'])->name('seller-dashboard');
     Route::get('/product', [SellerController::class, 'product'])->name('product-user');
-    Route::get('/product/add', [SellerController::class, 'addProduct'])->name('add-product');
+    Route::get('/product/create', [SellerController::class, 'create'])->name('add-product');
+    Route::post('/product/create', [SellerController::class, 'store']);
+    Route::delete('/product/destroyProduct/{product:slug}', [SellerController::class, 'destroyProduct'])->name('product-delete');
    
 }); 

@@ -7,6 +7,15 @@
 <div class="container">
     <a href="{{ route('product-user') }}" class="btn btn-success mb-3">Return</a>
 
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        @foreach ($errors->all() as $item)
+        <li>{{ $item }}</li>
+        @endforeach    
+    </div>
+    @endif
+<form action="" method="post" enctype="multipart/form-data">
+    @csrf
 
 <div class="row ">
     <div class="col-md-6 mb-3">
@@ -22,19 +31,20 @@
         <textarea name="description" id="desc" class="form-control" cols="3" rows="5"></textarea>
     </div>
     <div class="col-md-6 mb-3">
-    <label for="category">Category</label>
-    <select class="form-select" aria-label="Default select example">
-        <option selected disabled>Select Category</option>
-        <option value="1">One</option>
-        <option value="2">Two</option>
-        <option value="3">Three</option>
-      </select>  
+        <label for="category">Category</label>
+        <select class="form-select" name="category_id">
+            <option selected></option>
+            @foreach ($category as $key)
+                <option value={{ $key->id }}>{{ $key->name }}</option>
+            @endforeach
+          </select>
     </div>
     <div class="col-md-6 mb-3">
-        <label for="photo">Photo</label>
-        <input type="file" class="form-control" id="photo" name="photo" placeholder="Product Price">
+        <label for="image">Photo</label>
+        <input type="file" class="form-control" id="image" name="image">
         </div>
 </div>
-<button class="btn btn-primary px-4">Confirm</button>
+<button class="btn btn-primary px-4" type="submit">Confirm</button>
+</form>
 </div>
 @endsection

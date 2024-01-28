@@ -5,7 +5,12 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-dark">Products</h1>
 </div>
-<a href="{{ route('add-product') }}" class="btn btn-primary mb-3">Add Product</a>
+@if (session('status'))
+<div class="alert alert-warning">
+     {{ session('message') }}
+</div>    
+@endif
+<a href="{{ route('add-product') }}" class="btn btn-primary my-3">Add Product</a>
 <table class="table text-dark">
     <thead>
       <tr>
@@ -35,10 +40,11 @@
 
              <a href="" class="btn btn-warning">Edit</a>
             
-             <form action="" method="POST" class="d-inline">
+             <form action="{{ route('product-delete', $item->slug) }}" method="POST" class="d-inline">
                  @csrf
+                 @method('delete')
                     <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
+             </form>
            
                 
             </td>

@@ -5,6 +5,7 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-dark">Products</h1>
 </div>
+<a class="btn btn-primary mb-3" href="{{ route('create-product') }}">Add</a>
 <table class="table text-dark">
     <thead>
       <tr>

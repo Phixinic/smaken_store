@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/script.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
   </head>
   <body>
    
@@ -39,6 +40,7 @@
                 <div class="d-flex">
                   @if (!Auth::user())
                   <a href="{{ route('login') }}" class="btn btn-primary py-2 px-4 me-3 rounded-0">Log In</a> 
+                  <a href="{{ route('register') }}" class="btn btn-outline-primary py-2 px-4 me-3 rounded-0">Register</a> 
                   @elseif (Auth::user()->role == 'SA')
                   <a href="{{ route('admin-dashboard') }}" class="btn btn-primary py-2 px-4 rounded-0 mx-2">Dashboard</a>
                   @else

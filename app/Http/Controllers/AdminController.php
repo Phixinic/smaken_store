@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -30,24 +31,34 @@ class AdminController extends Controller
     }
     public function createCateg()
     {
-        return view('admin.category.create');
+        $parentCateg = Category::all();
+        return view('admin.category.create',['category' => $parentCateg]);
     }
     public function editCateg($id)
     {
         $find = Category::find($id);
-        return view('admin.category.show',['details' => $find]);
+        $parentCateg = Category::find($find->parentId);
+        $categoryAll = Category::all();
+        if($parentCateg == null){
+            return view('admin.category.show',['details' => $find, 'category' => $categoryAll,'parentCateg' => null]);
+        }else {
+            //JIKA PARENT ID TIDAK NULL
+            return view('admin.category.show',['details' => $find, 'category' => $categoryAll,'parentCateg' => $parentCateg]);
+        }
     }
     public function storeCateg(Request $request)
     {
         $validated = $request->validate([
-            'name' => 'required'
+            'name' => 'required', 
         ],[
             'name.required' => 'Isi Nama Kategori'
         ]);
-        // dd($validated);
+        $slug = Str::slug($request->name);
+        // dd($slug);
          Category::create([
             'name' => $request->name,
-            'parentId' => 0
+            'parentId' => $request->category,
+            'slug' => $slug
          ]);
         Session::flash('status', 'success');
         Session::flash('message', 'Kategori Ditambahkan');
@@ -60,10 +71,12 @@ class AdminController extends Controller
         ],[
             'name.required' => 'Isi Nama Kategori'
         ]);
-        // dd($validated);
+        $slug = Str::slug($request->name);
+        // dd($request->all());
          Category::where('id', $id)->update([
             "name" => $request->name,
-            "parentId" => 0
+            "parentId" => $request->category,
+            "slug" => $slug
          ]);
         Session::flash('status', 'success');
         Session::flash('message', 'Kategori Diubah');
@@ -107,4 +120,6 @@ class AdminController extends Controller
         $categ->delete();
         return back();
     }
+      
+    
 }

@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->string('name');
+            $table->string('slug')->unique();
+            $table->string('image');
             $table->string('price');
             $table->unsignedBigInteger('user_id'); //dibuat oleh.. ex: Produk dibuat oleh kelas RPL
             $table->longText('description')->nullable();

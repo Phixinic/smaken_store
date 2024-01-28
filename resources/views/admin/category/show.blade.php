@@ -22,6 +22,23 @@
         <label for="name">Category Name</label>
         <input type="text" class="form-control" id="name" name="name" placeholder="Category Name" value="{{ $details->name }}">
         </div>
+        <div class="col-md-6 mb-3">
+            <label for="slug">Parent Category <small class="text-danger">*Keep it null to make root parent</small></label>
+            <select class="form-select" name="category">
+                @if ($parentCateg != null)
+                     @foreach ($category as $key)
+                    <option value={{ $key->id }} {{ $key->id == $parentCateg->id ? 'selected' : '' }} >{{ $key->name }}</option>
+                    @endforeach  
+                @else
+                    <option selected></option>
+                    @foreach ($category as $key)
+                    <option value={{ $key->id }} >{{ $key->name }}</option>
+                    @endforeach 
+                @endif
+                
+               
+              </select>
+        </div>
     </div>
     <button class="btn btn-primary px-4" type="submit">Save Changes</button>
     </form>
