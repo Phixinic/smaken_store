@@ -9,65 +9,60 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('assets/js/script.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery-3.7.1.min.js') }}"></script>
   </head>
-  <body style="background-color: rgb(246, 229, 178)">
-    {{-- CONTENT --}}
-    <section class="vh-100">
-        <div class="container py-5 h-100">
-          <div class="row d-flex justify-content-center align-items-center h-100">
-            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-              <div class="card shadow-2-strong" style="border-radius: 1rem;">
-                <div class="card-body p-5 rounded-3" style="background-color: rgb(203, 165, 115)">
-                    
-                    <div class="text-center mb-4">
-                        <h2 class="mb-3">Login Smaken Store</h2>
-                        {{-- <p>Login sebagai <b>User/Masyarakat</b></p> --}}
-                    </div>
-                    @if (session('status'))
-                    <div class="alert alert-danger">
-                      {{ session('message') }}
-                    </div>    
-                    @endif
-                    @if ($errors->any())
-                    <div class="alert alert-danger">
-                      @foreach ( $errors->all() as $item)
-                          <li>{{ $item }}</li>
-                      @endforeach
-                    </div>    
-                    @endif
-                    <form action="" method="POST">
-                      @csrf
-                      <div class="form-outline mb-3">
-                        <label class="form-label" for="email">E-mail</label>
-                        <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="johnDoe@gmail.com"/>
-                      </div>
-                      <div class="form-outline mb-4">
-                        <label class="form-label" for="password">Password</label>
-                        <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="Password"/>
-                      </div>
 
-                      <div class="d-flex">
-                          <button class="btn btn-primary flex-fill" type="submit">Login</button>
-                      </div>
-                    </form>
-                  <hr>
-                <div class="d-flex flex-column">
-                    <a class="btn btn-success flex-fill" href="{{ route('register') }}">Ingin Bergabung? Daftar Sekarang</a>
+    <body>
+        <section class="vh-100">
+            <div class="container py-5 h-100">
+              <div class="row d-flex align-items-center justify-content-center h-100">
+                <div class="col-md-8 col-lg-7 col-xl-6">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.svg"
+                    class="img-fluid" alt="Phone image">
                 </div>
-
+                <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1 p-3">
+                    <div class="d-flex justify-content-center mb-4 flex-column">
+                        <h3 class="fw-bolder">LOGIN</h3>
+                        <p class="fst-italic">
+                            "Ragumu Rugimu"
+                        </p>
+                        @if (session('status'))
+                            <div class="alert alert-danger">
+                                {{ session('message') }}
+                            </div>    
+                        @endif
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                @foreach ( $errors->all() as $item)
+                                    <li>{{ $item }}</li>
+                                @endforeach
+                            </div>    
+                        @endif
+                    </div>
+                  <form action="" method="POST">
+                    @csrf
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="email">Email address</label>
+                      <input type="email" id="email" name="email" class="form-control form-control-lg" />
+                    </div>
+          
+                    <!-- Password input -->
+                    <div  class="form-outline mb-4">
+                        <label class="form-label" for="password">Password</label>
+                      <input  type="password" id="password" name="password"class="form-control form-control-lg" />
+                    </div>
+          
+                    <!-- Submit button -->
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary btn-lg w-100">Sign in</button>
+                    </div>
+          
+                   
+                  </form>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-
-    {{-- CONTENT --}}
-      <footer class=" align-self-end bg-primary p-5">
-
-      </footer>
-  </body>
-  
+          </section>
+    </body>
 </html>
-

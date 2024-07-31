@@ -3,28 +3,20 @@
 @section('content')
 <div class="container-fluid pt-5 mt-5">
     <div class="row mt-3 px-3 mb-4">
-        <div class="col-md-5 mb-3">
-            <img src="{{ asset('storage/'.$detail->image) }}" alt="" class="img-fluid" width="450px" height="450px">
+        <div class="col-md-5 mb-3" id="detail-gambar">
+            {{-- <img src="{{ asset('storage/'.$detail->image) }}" alt="" class="img-fluid" width="450px" height="450px"> --}}
         </div>
         <div class="col-md-7">
-            <h2 class="fw-bolder">{{ $detail->name }}</h2>
+            <h2 class="fw-bolder" id="product-name"></h2>
             <a href="https://wa.me/089515793188" class="btn btn-secondary rounded-0 mb-4"><i class="bi bi-whatsapp me-1"></i> Pesan Sekarang</a>
             <h4 class="mb-2">Kategori</h4>
             <div class="mx-1 d-flex mb-3">
-                {{-- @foreach ($detail->category as $item)
-                    <a href="" class="text-decoration-none text-primary">Barang</a>
-                    <p class="mx-2">-></p> 
-                @endforeach --}}
-                <a href="" class="text-decoration-none text-primary" id="category">{{ $detail->category->name }}</a>
-                {{-- <p class="mx-2">-></p>    
-                <a href="" class="text-decoration-none text-primary">Merch</a>
-                <p class="mx-2">-></p>    
-                <a href="" class="text-decoration-none text-primary">Jaket</a> --}}
+                <a href="" class="text-decoration-none text-primary" id="category"></a>
             </div>
             <h4 class="mb-2">Harga</h4>
-            <p class="mx-1 mb-3">Rp. {{ $detail->price }}</p>
-            <h4 class="mb-2">Deskripsi</h4>
-            <p class="mx-1 mb-3">{{ $detail->description }}</p>
+            <p class="mx-1 mb-3" id="product-price"></p>
+            <h4 class="mb-2" >Deskripsi</h4>
+            <p class="mx-1 mb-3" id="product-desc"></p>
         </div>
     </div>
     <h3 class="mt-5 pt-3 px-3 text-primary mb-3">Rekomendasi</h3>

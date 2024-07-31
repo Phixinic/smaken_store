@@ -5,13 +5,13 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-dark">Products</h1>
 </div>
-<a class="btn btn-primary mb-3" href="{{ route('create-product') }}">Add</a>
 <table class="table text-dark">
     <thead>
       <tr>
         <th>#</th>
         <th>Product Name</th>
-        <th>Price</th>
+        <th>User</th>
+        <th>Category</th>
         <th>Status</th>
         <th>Action</th>
       </tr>
@@ -21,7 +21,8 @@
         <tr>
             <th>{{ $loop->iteration }}</th>
             <td>{{ $item->name }}</td>
-            <td>{{ $item->price }}</td>
+            <td>{{ $item->user->username }}</td>
+            <td>{{ $item->category->name }}</td>
             @if ($item->status == 'verified')
             <td><span class="badge text-bg-success">Verified</span></td>
             @endif
@@ -46,7 +47,7 @@
                    </form>
                 @endif
 
-                 <a href="" class="btn btn-warning">Details</a>
+                 <a href="{{ route('show-product', $item->slug) }}" class="btn btn-warning">Details</a>
             
           
            

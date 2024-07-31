@@ -25,6 +25,7 @@ Route::get('/product/{product:slug}', [DashboardController::class, 'show'])->nam
 
 Route::get('/getReccomendation', [DashboardController::class, 'getReccomendation'])->name('getReccomendation');
 Route::get('/getDataProduct', [DashboardController::class, 'getDataProduct'])->name('getDataProduct');
+Route::get('/getDetailProduct/{any}', [DashboardController::class, 'getDetailProduct'])->name('getDetailProduct');
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout')->middleware('auth');
 Route::middleware('onlyGuest')->group(function(){
@@ -34,6 +35,10 @@ Route::middleware('onlyGuest')->group(function(){
     Route::post('/register', [AuthController::class, 'registerProccess']);
 });
 
+
+// Route::get('/dummy', function(){
+//     return view('dummy');
+// });
 
 Route::get('/faq', [FaqController::class, 'index'])->name('faq');
 
@@ -54,6 +59,7 @@ Route::prefix('admin')->middleware('onlyAdmin')->group(function(){
 
     Route::get('/product', [AdminController::class, 'product'])->name('admin-product');
     Route::get('/product/create', [AdminController::class, 'create'])->name('create-product');
+    Route::get('/product/{slug}', [AdminController::class, 'showProduct'])->name('show-product');
     Route::post('/product/{id}', [AdminController::class, 'changeStatProduct'])->name('status-product');
     // Route::post('/product/create', [AdminController::class, 'store'])->name('store-product');
     

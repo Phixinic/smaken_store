@@ -89,8 +89,15 @@ class AdminController extends Controller
         // dd($details);
     }
     public function product(){
-        $products = Product::all();
+        $products = Product::with('category','user')->get();
         return view('admin.product.index',['products'=>$products]);
+    }
+    public function showProduct($slug){
+        // dd($slug);
+        $products = Product::where('slug',$slug)
+        ->with('category','user')
+        ->firstOrFail();
+        return view('admin.product.show',['detail'=>$products]);
     }
     public function changeStatus($id){
         // dd($id);
@@ -120,6 +127,6 @@ class AdminController extends Controller
         $categ->delete();
         return back();
     }
-      
+    
     
 }
